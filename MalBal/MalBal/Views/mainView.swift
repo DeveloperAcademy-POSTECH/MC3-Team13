@@ -167,16 +167,21 @@ struct mainView: View {
                     
                     Spacer().frame(height: 80)
                     
-                    Button(action: {isActive.toggle()}) {
-                        Text("연습 보관함")
-                            .padding(.horizontal, 150)
-                            .padding(.top, 50)
-                            .padding(.bottom, 50)
-                            .foregroundColor(.white)
-                            .background(Color.main4)
-                            .cornerRadius(20)
+                    NavigationLink(destination: ModalView()) {
+                        Button(action: {
+                            withAnimation {
+                                isActive.toggle()
+                            }
+                        }) {
+                            Text("연습 보관함")
+                                .padding(.horizontal, 150)
+                                .padding(.top, 50)
+                                .padding(.bottom, 50)
+                                .foregroundColor(.white)
+                                .background(Color.main4)
+                                .cornerRadius(20)
+                        }
                     }
-                    .buttonStyle(PlainButtonStyle())
                 }
                 
             }

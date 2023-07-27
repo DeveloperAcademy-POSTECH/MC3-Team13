@@ -6,8 +6,6 @@ struct ModalView: View {
         ZStack {
             Text("ji")
         }
-        .animation(.easeIn)
         .transition(.move(edge: .bottom))
     }
-        
 }
